@@ -136,7 +136,7 @@ def gst_Dashboard(driver):
                 # Find and click the "More" button
                 more_button = driver.find_element(By.XPATH, "//*[@id='container-airindiagst---DocumentHistoryPriorTo--morelink']")  # Replace with actual XPath of the "More" button
                 more_button.click()
-                time.sleep(2)  # Adjust sleep time as necessary to allow content to load
+                time.sleep(5)  # Adjust sleep time as necessary to allow content to load
             except Exception as e:
                 print(f"An error occurred: {e}")
                 break  # Exit the loop if there's an error
@@ -157,13 +157,13 @@ def gst_Dashboard(driver):
         # Handle the popup and click the "Yes" button
         try:
             # Wait for the "Yes" button in the popup to be present
-            time.sleep(2)  # Adjust this sleep time as necessary
+            time.sleep(4)  # Adjust this sleep time as necessary
             yes_button = driver.find_element(By.XPATH, "//*[@id='__mbox-btn-2']")  # Replace with the actual XPath of the "Yes" button
             yes_button.click()
         except Exception as e:
             print(f"An error occurred while trying to click the 'Yes' button: {e}")
 
-        time.sleep(250)
+        time.sleep(400)
         driver.quit()
 
 
@@ -174,7 +174,7 @@ def gst_Dashboard(driver):
 # Example usage:
 def main():
     driver = _web_driver()
-    login(driver,"gst.shell@in.fcm.travel","FCMindia@123")
+    login(driver,"kotak.gstinput@gmail.com","Finkr@ft123")
     gst_Dashboard(driver)
 
 if __name__ == "__main__":
